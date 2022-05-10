@@ -1,0 +1,32 @@
+[
+  {
+    "id": "001",
+    "name": "Сultural heritage",
+    "customer": "Odesa Fine Arts Museum",
+    "createDate": "01.02.2002"
+  },
+  {
+    "id": "002",
+    "name": "National Identity",
+    "customer": "Pyrohiv",
+    "createDate": "01.05.2002"
+  },
+  {
+    "id": "003",
+    "name": "First Ukrainian philosopher",
+    "customer": "Hryhorii Skovoroda Literary Memorial Museum",
+    "createDate": "01.02.2002"
+  },
+  {
+    "id": "004",
+    "name": "Exhibitions of Ivan Aivazovsky",
+    "customer": "Kamianets-Podilskyi Castle",
+    "createDate": "01.05.2002"
+  },
+  {
+    "id": "005",
+    "name": "Antique books exhibition",
+    "customer": "One Street Museum",
+    "createDate": "01.02.2002"
+  }
+]
