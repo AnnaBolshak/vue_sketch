@@ -8,34 +8,42 @@
             <span class="checkmark"></span>
           </label>
         </div>
-        <div
-          class="name"
-          @click="sort('name')"
-        >
+        <div class="name" @click="sort('name')">
           Name
-          <font-awesome-icon :icon="['fa-solid', currentSort === 'name' ? `${sortIconClass}` : 'fa-sort']"/>
+          <font-awesome-icon
+            :icon="[
+              'fa-solid',
+              currentSort === 'name' ? `${sortIconClass}` : 'fa-sort',
+            ]"
+          />
         </div>
 
-        <div
-          class="customer"
-          @click="sort('customer')"
-        >
+        <div class="customer" @click="sort('customer')">
           Customer
-          <font-awesome-icon :icon="['fa-solid', currentSort === 'customer' ? `${sortIconClass}` : 'fa-sort']"/>
+          <font-awesome-icon
+            :icon="[
+              'fa-solid',
+              currentSort === 'customer' ? `${sortIconClass}` : 'fa-sort',
+            ]"
+          />
         </div>
-        <div
-          class="date"
-          @click="sort('createDate')"
-        >
+        <div class="date" @click="sort('createDate')">
           Date of creation
-          <font-awesome-icon :icon="['fa-solid', currentSort === 'createDate' ? `${sortIconClass}` : 'fa-sort']"/>
+          <font-awesome-icon
+            :icon="[
+              'fa-solid',
+              currentSort === 'createDate' ? `${sortIconClass}` : 'fa-sort',
+            ]"
+          />
         </div>
-        <div
-          class="code"
-          @click="sort('id')"
-        >
+        <div class="code" @click="sort('id')">
           Code
-          <font-awesome-icon :icon="['fa-solid', currentSort === 'id' ? `${sortIconClass}` : 'fa-sort']"/>
+          <font-awesome-icon
+            :icon="[
+              'fa-solid',
+              currentSort === 'id' ? `${sortIconClass}` : 'fa-sort',
+            ]"
+          />
         </div>
       </div>
 
@@ -65,17 +73,17 @@ import ListItem from "@/components/project-item/list-item.vue";
   },
 })
 export default class ListView extends Vue {
-  @Prop({ type: Array, required: true }) checkedProjects!: string[]
-  @Prop({ type: Array, required: true }) projects!: Project[]
+  @Prop({ type: Array, required: true }) checkedProjects!: string[];
+  @Prop({ type: Array, required: true }) projects!: Project[];
 
-  private currentSort = 'name'
-  private currentSortDir = 'asc'
+  private currentSort = "name";
+  private currentSortDir = "asc";
 
-  private get sortIconClass (): string {
-    return this.currentSortDir == 'asc' ? 'fa-sort-up' : 'fa-sort-down'
+  private get sortIconClass(): string {
+    return this.currentSortDir == "asc" ? "fa-sort-up" : "fa-sort-down";
   }
 
-  private get sortedProjects (): Project[] {
+  private get sortedProjects(): Project[] {
     return this.projects.sort((a: Project, b: Project) => {
       let modifier = 1;
       if (this.currentSortDir === "desc") modifier = -1;

@@ -43,5 +43,4 @@ export default class SearchField extends Vue {
     margin-left: -2em;
   }
 }
- 
 </style>

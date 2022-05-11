@@ -45,8 +45,8 @@ export default class ProjectsList extends Vue {
   private searchProjectsKeyword = "";
   private checkedProjects: string[] = [];
 
-  private get projects (): Project[] {
-    return this.$store.getters.projects
+  private get projects(): Project[] {
+    return this.$store.getters.projects;
   }
 
   private get filteredProjects(): Project[] {
@@ -70,8 +70,8 @@ export default class ProjectsList extends Vue {
     this.checkedProjects = [];
   }
 
-  private created (): void {
-    this.$store.dispatch('fetchProjects')
+  private created(): void {
+    this.$store.dispatch("fetchProjects");
   }
 }
 </script>
